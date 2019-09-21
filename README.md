@@ -71,3 +71,6 @@ Follow the instructions to implment `resting`, `picking up items` and `equipping
 - Implement fighting an enemy. (how you do it is up to you!)
 
 - When an enemy or weapon gets clicked it gets deleted from the page
+
+## Comments
+Passes tests, but after clicking items, throws error "TypeError: Cannot read property 'call' of undefined"

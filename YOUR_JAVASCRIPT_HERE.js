@@ -10,11 +10,10 @@ const hero = {
     }
 
 }
-console.log(hero)
-console.log(hero.weapon)
+
 //* Game logic functions
 
-//* Rest -
+//* Rest - passed
 function rest(Object) {
     if (Object.health === 10) {
         alert ('Health is already 10.');
@@ -28,11 +27,13 @@ document.getElementById('inn').addEventListener('click', function() {rest(hero)}
 //* Pick up item - passed
 function pickUpItem(hero, weapon) {
     hero.inventory.push(weapon)
+    console.log(weapon)
 
 };
 document.getElementById('dagger').addEventListener('click', function() {
     let weapon = {type: 'dagger', damage: 2}
     {pickUpItem(hero, weapon)}
+    console.log(weapon)
 })
 //* Equip Weapon
 //* Description sounds like the weapon should replace the inventory contents, but test passes when inventory replaces weapon
@@ -44,3 +45,16 @@ function equipWeapon(hero) {
 document.getElementById('bag').addEventListener('click', function() {
     equipWeapon(hero)
 })
+
+
+//* Display Stats 
+//* Why does this not display as a multi-line string?
+function displayStats () {
+document.write(`${hero.name}
+Health: ${hero.health}
+Weapon: ${hero.weapon.type}
+Weapon Damage ${hero.weapon.damage}
+`)
+
+}
+displayStats()

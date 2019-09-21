@@ -35,7 +35,7 @@ document.getElementById('inn').addEventListener('click', function() {rest(hero)}
 function pickUpItem(hero, weapon) {
     hero.inventory.push(weapon)
     console.log(weapon)
-
+    displayStats()
 };
 document.getElementById('dagger').addEventListener('click', function() {
     let weapon = {type: 'dagger', damage: 2}

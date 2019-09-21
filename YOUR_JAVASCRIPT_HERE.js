@@ -8,7 +8,13 @@ const hero = {
         type: '',
         damage: 2,
     }
+}
 
+//* Collect user data
+function newPlayer() {
+    const playerName = prompt ('Please enter your name.', 'Hero');
+    hero.name = playerName;
+    console.log(hero)
 }
 
 //* Game logic functions
@@ -50,11 +56,18 @@ document.getElementById('bag').addEventListener('click', function() {
 //* Display Stats 
 //* Why does this not display as a multi-line string?
 function displayStats () {
-document.write(`${hero.name}
-Health: ${hero.health}
-Weapon: ${hero.weapon.type}
-Weapon Damage ${hero.weapon.damage}
-`)
-
+    document.write(`${hero.name}
+    Health: ${hero.health}
+    Weapon: ${hero.weapon.type}
+    Weapon Damage ${hero.weapon.damage}`)
+}
+//* Display Stats 
+//* Why does this not display as a multi-line string?
+function displayStats () {
+    document.write(`${hero.name}
+    Health: ${hero.health}
+    Weapon: ${hero.weapon.type}
+    Weapon Damage ${hero.weapon.damage}`)
 }
 displayStats()
+
